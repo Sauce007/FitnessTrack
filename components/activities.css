@@ -1,0 +1,123 @@
+.activities-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.activities-header {
+  display: flex;
+  align-items: center;
+}
+
+.activities-header > button {
+  margin-left: 10px;
+}
+
+.activities-list {
+  padding-top: 10px;
+}
+
+.activity {
+  border: 1px solid black;
+  padding: 10px;
+  flex: 1 0 20%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+}
+
+.modal > .contents {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  /* top: 50vh;
+  left: 50vw; */
+  width: 400px;
+  height: 500px;
+  /* transform: translate(-50%, -300%); */
+  background-color: beige;
+  box-shadow: 1px 1px 15px black;
+}
+
+.contents label {
+  flex: 1;
+  display: block;
+  font-size: 2.5em;
+  font-family: monospace;
+  text-align: center;
+  font-weight: bold;
+  
+  padding: 35px;
+  background-color: bisque;
+}
+
+.contents > .activity-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  flex: 10;
+  padding: 20px;
+}
+
+.activity-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2;
+  font-family: monospace;
+  background-color: lightblue;
+  box-shadow: 0px 0px 5px black;
+  margin-bottom: 5px;
+}
+
+.activity-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2em;
+  font-family: monospace;
+  background-color: lightblue;
+  box-shadow: 0px 0px 5px black;
+  margin-bottom: 5px;
+}
+
+.activity-form input:focus[type="text"], textarea:focus {
+  box-shadow: 0px 0px 5px 1px black inset;
+}
+
+.activity-form input:invalid:required, textarea:invalid:required {
+  border-right: 3px solid red;
+  border-left: 3px solid red;
+}
+
+.activity-form input:valid:required + h5 {
+  display: none;
+}
+
+.activity-form textarea:valid:required + h5 {
+  display: none;
+}
+
+.activity-form .buttons {
+  align-self: flex-end;
+  display: flex;
+}
+
+.buttons button {
+  font-family: monospace;
+  font-size: 1.5em;
+}
+
+.buttons .cancel-button {
+  margin-right: 10px;
+}
