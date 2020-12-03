@@ -1,0 +1,22 @@
+.routines-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+}
+
+.routine-card {
+    display: fixed;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid black;
+  }
+
+  .routine-header {
+      text-decoration: underline;
+  }
+
+ 
